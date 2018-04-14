@@ -10,7 +10,7 @@ const providers = [
 
 ## Dependencies
 
-This module has dependencies on `@adonisjs/mail`.
+This module has dependencies on `@adonisjs/mail` and `@adonisjs/validator`.
 
 ## Docs
 

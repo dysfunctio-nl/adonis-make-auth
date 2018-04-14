@@ -4,6 +4,7 @@ Similar to Laravel's make:auth, creates boilerplate for AdonisJs' auth system
 
 ## Contents
 - [Main Features](#main-features)
+- [Dependencies](#dependencies)
 - [Setup](#setup)
 - [Custom routes](#custom-routes)
 
@@ -13,6 +14,10 @@ Similar to Laravel's make:auth, creates boilerplate for AdonisJs' auth system
 * Controllers for login, register and password recovery
 * Validators for all forms
 * Migration for password recovery
+
+## Dependencies
+
+This module has dependencies on `@adonisjs/mail` and `@adonisjs/validator`.
 
 ## Setup
 
@@ -38,11 +43,14 @@ Setup your database connection and run the migration command
 adonis migration:run
 ```
 
-Add the following to `start/routes.js`
+Your `start/routes.js` file should look something like the following:
 ```js
+const Route = use('Route')
 const AuthRoutes = use('Auth/Routes')
 
 AuthRoutes()
+
+Route.on('/').render('welcome').as('home')
 ```
 
 Start the server
@@ -77,3 +85,7 @@ Route.group(() => {
     Route.get('/password/reset/:token', 'ResetPasswordController.showResetForm').as('password.reset')
 }).namespace('Auth')
 ```
+
+## Changing the redirect page
+
+In each controller there is a redirectTo property, this defaults to the route 'home', change this as needed!
