@@ -7,6 +7,7 @@ Similar to Laravel's make:auth, creates boilerplate for AdonisJs' auth system
 - [Dependencies](#dependencies)
 - [Setup](#setup)
 - [Custom routes](#custom-routes)
+- [Changing the redirect page](#changing-the-redirect-page)
 
 ## Main Features
 
