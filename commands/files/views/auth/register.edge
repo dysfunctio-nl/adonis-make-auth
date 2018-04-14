@@ -1,0 +1,49 @@
+@layout('layouts/auth')
+
+@section('content')
+  <h1>Register</h1>
+
+  <form method="POST" action="{{ route('register') }}">
+    {{ csrfField() }}
+
+    <div>
+      <label>Username</label>
+      <input type="text" id="username" name="username" value="{{ old('username', '') }}">
+
+      @if(hasErrorFor('username'))
+        <p class="danger">{{ getErrorFor('username') }}</p>
+      @endif
+    </div>
+
+    <div>
+      <label>Email</label>
+      <input type="text" id="email" name="email" value="{{ old('email', '') }}">
+
+      @if(hasErrorFor('email'))
+        <p class="danger">{{ getErrorFor('email') }}</p>
+      @endif
+    </div>
+
+    <div>
+      <label>Password</label>
+      <input type="password" id="password" name="password">
+
+      @if(hasErrorFor('password'))
+        <p class="danger">{{ getErrorFor('password') }}</p>
+      @endif
+    </div>
+
+    <div>
+      <label>Confirm Password</label>
+      <input type="password" id="password_confirmation" name="password_confirmation">
+
+      @if(hasErrorFor('password_confirmation'))
+        <p class="danger">{{ getErrorFor('password_confirmation') }}</p>
+      @endif
+    </div>
+
+    <div>
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+@endsection

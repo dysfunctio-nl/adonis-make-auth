@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello Adonis</title>
+  {{ css('style') }}
+
+  <style>
+    .content {
+      background:white;
+      padding:30px;
+      height:auto;
+      border-radius:5px;
+      width:100%;
+      text-align: center;
+    }
+
+    form {
+      width:70%;
+      margin:auto;
+    }
+
+    input, label {
+      display:block;
+      width:100%;
+      border-radius:3px;
+    }
+
+    label {
+      text-align:left;
+      margin:10px 0;
+    }
+
+    input[type=text], input[type=password] {
+      width: calc(100% - 22px);
+      padding:10px;
+      border:1px solid #ccc;
+    }
+
+    input[type=submit] {
+      margin-top:20px;
+      height:35px;
+      background:#220052;
+      border:0;
+      color:white;
+      width:auto;
+      padding:0 15px;
+    }
+
+    input[type=submit]:hover {
+      background:#4a1a8e;
+    }
+
+    div a {
+      display:block;
+      margin-top:20px;
+    }
+
+    .danger {
+      text-align: left;
+      margin-top: 10px;
+      font-size: 0.8em;
+      color: #b92824;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div class="content">
+      @!section('content')
+    </div>
+  </section>
+</body>
+</html>

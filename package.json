@@ -1,0 +1,35 @@
+{
+  "author": {
+    "name": "Dysfunctio.nl"
+  },
+  "bugs": {
+    "url": "https://github.com/dysfunctio-nl/adonis-make-auth/issues"
+  },
+  "description": "Similar to Laravel's make:auth, creates boilerplate for AdonisJs' auth system",
+  "dependencies": {
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "@adonisjs/fold": "^4.0.7",
+    "@adonisjs/sink": "^1.0.13"
+  },
+  "homepage": "https://github.com/dysfunctio-nl/adonis-make-auth#readme",
+  "keywords": [
+    "adonisjs",
+    "adonis-framework",
+    "auth",
+    "make",
+    "starter"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@dysfunctionl/adonis-make-auth",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dysfunctio-nl/adonis-make-auth"
+  },
+  "scripts": {
+    "lint": "eslint src"
+  },
+  "version": "0.0.1"
+}

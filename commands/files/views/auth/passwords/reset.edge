@@ -1,0 +1,42 @@
+@layout('layouts/auth')
+
+@section('content')
+  <h1>Reset Password</h1>
+
+  <form method="POST" action="{{ route('password.reset') }}">
+    {{ csrfField() }}
+
+    <input type="hidden" name="token" value="{{ old('token', token) }}">
+
+    <div>
+      <label>Email</label>
+      <input type="text" id="email" name="email" value="{{ old('email', '') }}">
+
+      @if(hasErrorFor('email'))
+        <span class="danger">{{ getErrorFor('email') }}</span>
+      @endif
+    </div>
+
+    <div>
+      <label>Password</label>
+      <input type="password" id="password" name="password">
+
+      @if(hasErrorFor('password'))
+        <p class="danger">{{ getErrorFor('password') }}</p>
+      @endif
+    </div>
+
+    <div>
+      <label>Confirm Password</label>
+      <input type="password" id="password_confirmation" name="password_confirmation">
+
+      @if(hasErrorFor('password_confirmation'))
+        <span class="danger">{{ getErrorFor('password_confirmation') }}</span>
+      @endif
+    </div>
+
+    <div>
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+@endsection
